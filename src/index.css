@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input,
+  textarea {
+    all: unset;
+  }
+  button {
+    all: unset;
+  }
+  ul,
+  li {
+    list-style-type: none;
+  }
+}
