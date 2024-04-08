@@ -21,5 +21,5 @@ export const sortingProductByPrice = (price: number, products: AllProducts) => {
 };
 
 export const sortingProductByArea = (area: number, products: AllProducts) => {
-  return products.filter((product) => product.area === area);
+  return products.filter((product) => product.area < area);
 };

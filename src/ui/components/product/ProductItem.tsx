@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
 import { Product } from "../../../domain/product";
 
-const ProductItem = ({ id, image, title, price, description }: Product) => {
+const ProductItem = ({
+  id,
+  image,
+  title,
+  price,
+  area,
+  description,
+}: Product) => {
   return (
     <Link
       to={`/products/${id}`}
@@ -17,7 +24,10 @@ const ProductItem = ({ id, image, title, price, description }: Product) => {
       </div>
       <div className="flex justify-between items-center mt-4">
         <h5 className="font-openSansBold text-lg">{title}</h5>
-        <h6>{price} $</h6>
+        <span>
+          <h6>{price} $</h6>
+          <h6>{area} M</h6>
+        </span>
       </div>
       <p className=" mt-4">{description.slice(0, 150)} ...</p>
     </Link>

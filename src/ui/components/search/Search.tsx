@@ -1,22 +1,37 @@
 import { useState } from "react";
-import { AllProducts, searchProduct } from "../../../domain/product";
+import {
+  AllProducts,
+  searchProduct,
+  sortingProductByArea,
+  sortingProductByPrice,
+} from "../../../domain/product";
 
 type SearchType = {
   allData: AllProducts;
   setData: React.Dispatch<React.SetStateAction<AllProducts>>;
+  sortingType?: string;
 };
-const Search = ({ setData, allData }: SearchType): JSX.Element => {
+const Search = ({ setData, allData, sortingType }: SearchType): JSX.Element => {
   const [searchInput, setSearchInput] = useState("");
   const searchHandler = (title: string) => {
-    setData(searchProduct(title.trim(), allData)!);
+    console.log("sortingType=> ", sortingType);
+    if (sortingType) {
+      if (sortingType === "by price")
+        setData(sortingProductByPrice(+title.trim(), allData)!);
+      else setData(sortingProductByArea(+title.trim(), allData)!);
+    } else {
+      setData(searchProduct(title.trim(), allData)!);
+    }
     setSearchInput(title);
   };
+
   return (
     <div className="max-w-sm mx-auto mt-5 relative">
       <input
         className="w-[96%] py-2 px-2 bg-gray-200 rounded-xl"
         onChange={(e) => searchHandler(e.target.value)}
         value={searchInput}
+        placeholder={`${sortingType ? `sorting ${sortingType}` : "search ..."}`}
       />
       {searchInput ? (
         <button
