@@ -1,5 +1,5 @@
 import products from "../../../../public/assets/data/index";
-import ProductItem from "../../components/products/ProductItem";
+import ProductItem from "../../components/product/ProductItem";
 
 const HomePage = (): JSX.Element => {
   return (
