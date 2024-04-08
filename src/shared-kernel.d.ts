@@ -1,2 +1,2 @@
 type Email = string;
-type UniqId = string;
+type UniqId = number;
