@@ -12,6 +12,7 @@ const App = () => {
       setLocalStorage("products", [...longProductData]);
     } else {
       setLocalStorage("products", [...productData]);
+      window.location.reload();
     }
   }, []);
 

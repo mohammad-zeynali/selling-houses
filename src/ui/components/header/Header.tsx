@@ -21,8 +21,8 @@ const Header = (): JSX.Element => {
             <NavLink className="header-menu__link" to="/create-product">
               create ads
             </NavLink>
-            <NavLink className="header-menu__link" to="/search">
-              search
+            <NavLink className="header-menu__link" to="/sorting">
+              sorting
             </NavLink>
           </ul>
         </nav>

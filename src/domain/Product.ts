@@ -8,12 +8,7 @@ export type Product = {
 };
 export type AllProducts = Product[];
 
-export const addProductAds = (products: AllProducts, product: Product) => {
-  return { ...products, products: [...products, product] };
-};
-
 export const searchProduct = (title: string, products: AllProducts) => {
-  // console.log("title=> ", title.split(" ").length);
   if (title?.length > 1) {
     return products.filter((product) => product.title === title);
   } else {

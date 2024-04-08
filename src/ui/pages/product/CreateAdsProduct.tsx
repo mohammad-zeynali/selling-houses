@@ -10,7 +10,7 @@ export type CreateProductFiledType = {
   description: string;
 };
 
-const CreateAdsProduct = (): JSX.Element => {
+const CreateAdsProductPage = (): JSX.Element => {
   const { createProduct } = useCreateProduct();
   const {
     register,
@@ -44,4 +44,4 @@ const CreateAdsProduct = (): JSX.Element => {
   );
 };
 
-export default CreateAdsProduct;
+export default CreateAdsProductPage;
