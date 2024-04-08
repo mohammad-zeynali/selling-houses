@@ -2,12 +2,12 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = (): JSX.Element => {
   return (
-    <header className="shadow-md py-2">
+    <header className="shadow-lg py-2">
       <div className="container">
         <nav className="flex justify-between items-center">
           <Link to="/">
             <div className="flex items-center">
-              <img src="./assets/react.svg" />
+              <img src="../assets/react.svg" />
               <span className="pl-2">selling houses</span>
             </div>
           </Link>
