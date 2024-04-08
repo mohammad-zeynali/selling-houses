@@ -35,8 +35,7 @@ const SortingPage = (): JSX.Element => {
           sortingType={sortingType}
         />
         <p className="text-center mt-4">
-          List of houses lower than the entered price{" "}
-          {sortingType === "by price" ? "price" : "area"}
+          Homes {sortingType} below your entry {sortingType} will be displayed.
         </p>
         {allProducts?.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 pt-6 pb-12">

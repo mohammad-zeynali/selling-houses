@@ -16,7 +16,7 @@ const Header = (): JSX.Element => {
           <ul
             className={`duration-500 fixed sm:static w-64 sm:w-auto top-0 ${
               isShowMobileNavbar ? "right-0" : "-right-64"
-            } right-0 bg-white flex flex-col pt-4 sm:pt-0 items-center bottom-0 sm:flex-row gap-4 text-lg z-40`}
+            } bg-white flex flex-col pt-4 sm:pt-0 items-center bottom-0 sm:flex-row gap-4 text-lg z-40`}
           >
             <NavLink className="header-menu__link" to="/">
               home

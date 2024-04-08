@@ -9,8 +9,10 @@ export type Product = {
 export type AllProducts = Product[];
 
 export const searchProduct = (title: string, products: AllProducts) => {
+  const regex = new RegExp(`.*${title}.*`, "i");
   if (title?.length > 1) {
-    return products.filter((product) => product.title === title);
+    // return products.filter((product) => product.title === title);
+    return products.filter((product) => regex.test(product.title));
   } else {
     return products;
   }
