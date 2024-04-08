@@ -1,16 +1,31 @@
-import { useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import CreateAdsForm from "../../components/createAdsForm/CreateAdsForm";
+import { useCreateProduct } from "../../../application/products/createProduct";
+import { Product } from "../../../domain/product";
+
+export type CreateProductFiledType = {
+  title: string;
+  price: string;
+  area: string;
+  description: string;
+};
 
 const CreateAdsProduct = (): JSX.Element => {
+  const { createProduct } = useCreateProduct();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const createNewAdsProduct = async (data: unknown) => {
+  const createNewAdsProduct = async (data: FieldValues) => {
     console.log("createNewAdsProduct=> ", data);
-    // localStorage.setItem("products",);
+    const submitData = {
+      ...data,
+      id: Math.floor(Math.random() * 1_000_000_000_000),
+      image: "./assets/images/houses/house_9.jpg",
+    } as Product;
+    createProduct(submitData);
   };
   return (
     <section className="min-h-[90vh]">

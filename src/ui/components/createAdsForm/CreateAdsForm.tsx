@@ -10,7 +10,7 @@ export type CreateAdsFormType = {
   handleSubmit: UseFormHandleSubmit<FieldValues, undefined>;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors<FieldValues>;
-  createNewAdsProduct: (data: unknown) => Promise<void>;
+  createNewAdsProduct: (data: FieldValues) => Promise<void>;
 };
 
 const CreateAdsForm = ({
