@@ -4,7 +4,7 @@ import useIntendedProduct from "../../../application/products/intendedProduct";
 import { useEffect, useState } from "react";
 import { Product } from "../../../domain/product";
 
-const ProductDetails = (): JSX.Element => {
+const ProductDetailsPage = (): JSX.Element => {
   const { id } = useParams();
   const [product, setProduct] = useState<Product>();
   const { intendedProduct } = useIntendedProduct();
@@ -22,4 +22,4 @@ const ProductDetails = (): JSX.Element => {
   );
 };
 
-export default ProductDetails;
+export default ProductDetailsPage;

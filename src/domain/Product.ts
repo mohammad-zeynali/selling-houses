@@ -13,7 +13,12 @@ export const addProductAds = (products: AllProducts, product: Product) => {
 };
 
 export const searchProduct = (title: string, products: AllProducts) => {
-  return products.filter((product) => product.title === title);
+  // console.log("title=> ", title.split(" ").length);
+  if (title?.length > 1) {
+    return products.filter((product) => product.title === title);
+  } else {
+    return products;
+  }
 };
 
 export const sortingProductByPrice = (price: number, products: AllProducts) => {
