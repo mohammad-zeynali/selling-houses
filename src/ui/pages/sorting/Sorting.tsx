@@ -2,6 +2,7 @@ import { useState } from "react";
 import products from "../../../../public/assets/data";
 import ProductItem from "../../components/product/ProductItem";
 import Search from "../../components/search/Search";
+import SortingTab from "../../components/sortingTab/SortingTab";
 
 const SortingPage = (): JSX.Element => {
   const [allProducts, setAllProducts] = useState(products);
@@ -16,18 +17,7 @@ const SortingPage = (): JSX.Element => {
           Sort by price or area
         </h1>
 
-        <ul className="max-w-sm mx-auto grid gap-4 sm:grid-cols-2 mt-4">
-          {["by price", "by area"].map((item) => (
-            <li
-              onClick={() => setSortingType(item)}
-              className={`${
-                item === sortingType ? "bg-danger text-white" : "bg-white"
-              } text-center py-2 rounded-lg cursor-pointer font-openSansBold`}
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
+        <SortingTab sortingType={sortingType} setSortingType={setSortingType} />
 
         <Search
           setData={setAllProducts}
