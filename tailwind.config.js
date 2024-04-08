@@ -2,7 +2,20 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      container: {
+        center: true,
+        padding: "1rem",
+      },
+      colors: {
+        light: "#F4F4F4",
+      },
+      fontFamily: {
+        openSansRegular: ["openSansRegular"],
+        openSansMedium: ["openSansMedium"],
+        openSansBold: ["openSansBold"],
+      },
+    },
   },
   plugins: [],
 };
