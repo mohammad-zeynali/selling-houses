@@ -18,3 +18,18 @@
   color: #333;
   border-bottom: 2px solid #e65540;
 }
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 31;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: inset -37px 0 72px -6px rgba(0, 0, 0, 0.25);
+  transform: translateZ(0);
+  height: 110%;
+  transition: all 250ms;
+}
