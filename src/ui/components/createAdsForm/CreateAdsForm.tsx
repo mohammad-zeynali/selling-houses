@@ -10,7 +10,7 @@ export type CreateAdsFormType = {
   handleSubmit: UseFormHandleSubmit<FieldValues, undefined>;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors<FieldValues>;
-  createNewAdsProduct: () => Promise<void>;
+  createNewAdsProduct: (data: unknown) => Promise<void>;
 };
 
 const CreateAdsForm = ({
@@ -21,7 +21,7 @@ const CreateAdsForm = ({
 }: CreateAdsFormType): JSX.Element => {
   return (
     <form
-      className="max-w-3xl mx-auto p-5"
+      className="max-w-3xl mx-auto p-5 pr-10"
       onSubmit={handleSubmit(createNewAdsProduct)}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 justify-items-center">

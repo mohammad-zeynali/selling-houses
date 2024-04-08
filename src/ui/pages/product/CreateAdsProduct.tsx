@@ -8,7 +8,10 @@ const CreateAdsProduct = (): JSX.Element => {
     formState: { errors },
   } = useForm();
 
-  const createNewAdsProduct = async () => {};
+  const createNewAdsProduct = async (data: unknown) => {
+    console.log("createNewAdsProduct=> ", data);
+    // localStorage.setItem("products",);
+  };
   return (
     <section className="min-h-[90vh]">
       <div className="container px-0">

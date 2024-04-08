@@ -5,6 +5,8 @@ import Search from "../../components/search/Search";
 
 const ProductsLists = (): JSX.Element => {
   const [allProducts, setAllProducts] = useState(products);
+  console.log("allProducts->", allProducts);
+
   return (
     <section className="min-h-[90vh]">
       <div className="container">

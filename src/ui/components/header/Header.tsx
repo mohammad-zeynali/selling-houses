@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = (): JSX.Element => {
   return (
-    <header className="bg-white left-0 right-0 fixed shadow-[0px_2px_4px_1px_rgb(0,0,0,0.3)] py-3 z-20">
+    <header className="bg-white left-0 right-0 fixed shadow-[0px_2px_4px_1px_rgb(0,0,0,0.3)] py-3 z-30">
       <div className="container">
         <nav className="flex justify-between items-center">
           <Link to="/">

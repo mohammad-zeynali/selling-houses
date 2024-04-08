@@ -1,4 +1,6 @@
-const products = [
+import { AllProducts } from "../../../src/domain/product";
+
+export const productData = [
   {
     id: 1,
     title: "house 1",
@@ -65,4 +67,6 @@ const products = [
   },
 ];
 
+const products: AllProducts =
+  JSON.parse(localStorage.getItem("products")!) || [];
 export default products;
