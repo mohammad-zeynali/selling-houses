@@ -4,6 +4,7 @@ import App from "../App";
 import HomePage from "../ui/pages/home/Home";
 import ProductDetailsPage from "../ui/pages/product/ProductDetails";
 import ProductsLists from "../ui/pages/product/ProductsLists";
+import CreateAdsProduct from "../ui/pages/product/CreateAdsProduct";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/products", element: <ProductsLists /> },
       { path: "/products/:id", element: <ProductDetailsPage /> },
+      { path: "/create-product", element: <CreateAdsProduct /> },
     ],
   },
 ]);

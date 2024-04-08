@@ -8,7 +8,7 @@ export default {
         padding: "1rem",
       },
       colors: {
-        light: "#F4F4F4",
+        light: "#f9f9f9",
         danger: "#e65540",
       },
       fontFamily: {

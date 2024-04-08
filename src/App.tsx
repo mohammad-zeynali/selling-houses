@@ -5,7 +5,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <div className="bg-light">
+      <div className="bg-light pt-12">
         <Outlet />
       </div>
     </>

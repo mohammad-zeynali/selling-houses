@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = (): JSX.Element => {
   return (
-    <header className="shadow-lg py-2">
+    <header className="bg-white left-0 right-0 fixed shadow-[0px_2px_4px_1px_rgb(0,0,0,0.3)] py-3 z-20">
       <div className="container">
         <nav className="flex justify-between items-center">
           <Link to="/">
@@ -11,15 +11,15 @@ const Header = (): JSX.Element => {
               <span className="pl-2">selling houses</span>
             </div>
           </Link>
-          <ul className="flex gap-4">
+          <ul className="flex gap-4 text-lg">
             <NavLink className="header-menu__link" to="/">
-              Home
+              home
             </NavLink>
             <NavLink className="header-menu__link" to="/products">
-              Products
+              houses
             </NavLink>
             <NavLink className="header-menu__link" to="/create-product">
-              create products
+              create ads
             </NavLink>
             <NavLink className="header-menu__link" to="/search">
               search

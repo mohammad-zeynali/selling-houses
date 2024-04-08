@@ -9,7 +9,6 @@ const ProductsLists = (): JSX.Element => {
     <section className="min-h-[90vh]">
       <div className="container">
         <h1 className="mx-auto text-2xl font-openSansBold pt-8 border-b-2 border-solid border-danger w-fit pb-2">
-          {" "}
           all selling houses
         </h1>
 
