@@ -9,6 +9,7 @@ export default {
       },
       colors: {
         light: "#F4F4F4",
+        danger: "#e65540",
       },
       fontFamily: {
         openSansRegular: ["openSansRegular"],

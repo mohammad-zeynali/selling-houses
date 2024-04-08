@@ -3,7 +3,7 @@ export type Product = {
   title: string;
   price: number;
   image: string;
-  area: string;
+  area: number;
   description: string;
 };
 export type AllProducts = Product[];
@@ -20,6 +20,6 @@ export const sortingProductByPrice = (price: number, products: AllProducts) => {
   return products.filter((product) => product.price < price);
 };
 
-export const sortingProductByArea = (area: string, products: AllProducts) => {
+export const sortingProductByArea = (area: number, products: AllProducts) => {
   return products.filter((product) => product.area === area);
 };
