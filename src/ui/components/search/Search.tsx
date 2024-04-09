@@ -14,7 +14,6 @@ type SearchType = {
 const Search = ({ setData, allData, sortingType }: SearchType): JSX.Element => {
   const [searchInput, setSearchInput] = useState("");
   const searchHandler = (title: string) => {
-    console.log("sortingType=> ", sortingType);
     if (sortingType) {
       if (sortingType === "by price")
         setData(sortingProductByPrice(+title.trim(), allData)!);

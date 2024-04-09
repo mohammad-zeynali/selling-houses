@@ -1,5 +1,5 @@
-export const useLocalStorageMange = () => {
-  const setLocalStorage = (title: string, data: unknown) => {
+export const useLocalStorageMange = <T>() => {
+  const setLocalStorage = (title: string, data: T) => {
     return localStorage.setItem(title, JSON.stringify(data));
   };
 
@@ -9,3 +9,16 @@ export const useLocalStorageMange = () => {
 
   return { setLocalStorage, getLocalStorage };
 };
+
+// export const useLocalStorageMange = <T extends LocalStorageItem>() => {
+//   const setLocalStorage = (title: string, data: T) => {
+//     return localStorage.setItem(title, JSON.stringify(data));
+//   };
+
+//   const getLocalStorage = (title: string): T | null => {
+//     const item = localStorage.getItem(title);
+//     return item ? JSON.parse(item) : null;
+//   };
+
+//   return { setLocalStorage, getLocalStorage };
+// };

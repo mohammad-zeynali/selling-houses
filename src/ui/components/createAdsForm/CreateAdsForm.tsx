@@ -35,6 +35,7 @@ const CreateAdsForm = ({
         />
       </div>
       <div className="flex justify-center mt-5">
+        {/* create ruseble button component */}
         <button className="bg-green-500 text-xl text-white py-2 px-6 rounded-lg cursor-pointer">
           submit
         </button>

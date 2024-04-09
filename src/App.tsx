@@ -4,14 +4,17 @@ import { useEffect } from "react";
 import { useLocalStorageMange } from "./services/storageAdapter";
 import { productData } from "../public/assets/data";
 import { useStore } from "./contexts/store";
+import { Product } from "./domain/product";
 
 const App = () => {
-  const { getLocalStorage, setLocalStorage } = useLocalStorageMange();
+  // create as custom hook and rusable
+  const { getLocalStorage, setLocalStorage } =
+    useLocalStorageMange<Product[]>();
   const { isShowMobileNavbar, setIsShowMobileNavbar } = useStore();
   useEffect(() => {
-    const longProductData = getLocalStorage("products") || [];
-    if (longProductData?.length > 0) {
-      setLocalStorage("products", [...longProductData]);
+    const oldProducts = getLocalStorage("products") || [];
+    if (oldProducts?.length > 0) {
+      setLocalStorage("products", [...oldProducts]);
     } else {
       setLocalStorage("products", [...productData]);
       window.location.reload();
