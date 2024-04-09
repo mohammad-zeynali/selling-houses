@@ -1,8 +1,8 @@
 import { FieldValues, useForm } from "react-hook-form";
-import CreateAdsForm from "../../components/createAdsForm/CreateAdsForm";
-import { useCreateProduct } from "../../../application/products/createProduct";
 import { Product } from "../../../domain/product";
+import { useCreateProduct } from "../../../application/products/createProduct";
 import SectionTitle from "../../components/core/sectionTitle/SectionTitle";
+import CreateAdsForm from "../../components/createAdsForm/CreateAdsForm";
 
 export type CreateProductFiledType = {
   title: string;

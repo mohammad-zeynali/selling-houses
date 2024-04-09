@@ -1,8 +1,8 @@
 import { useState } from "react";
 import products from "../../../../public/assets/data";
-import ProductItem from "../../components/product/ProductItem";
-import Search from "../../components/core/search/Search";
 import SectionTitle from "../../components/core/sectionTitle/SectionTitle";
+import Search from "../../components/core/search/Search";
+import ProductItem from "../../components/product/ProductItem";
 
 const ProductsListsPage = (): JSX.Element => {
   const [allProducts, setAllProducts] = useState(products);

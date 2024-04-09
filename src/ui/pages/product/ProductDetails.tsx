@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Product } from "../../../domain/product";
 import ProductDetailsBox from "../../components/product/ProductDetailsBox";
 import useIntendedProduct from "../../../application/products/intendedProduct";
-import { useEffect, useState } from "react";
-import { Product } from "../../../domain/product";
 
 const ProductDetailsPage = (): JSX.Element => {
   const { id } = useParams();
