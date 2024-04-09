@@ -1,24 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Header from "./ui/components/header/Header";
-import { useEffect } from "react";
-import { useLocalStorageMange } from "./services/storageAdapter";
-import { productData } from "../public/assets/data";
 import { useStore } from "./contexts/store";
-import { Product } from "./domain/product";
+import { useSetProductsToLocalStorage } from "./application/products/createProduct";
+import { useEffect } from "react";
 
 const App = () => {
-  // create as custom hook and rusable
-  const { getLocalStorage, setLocalStorage } =
-    useLocalStorageMange<Product[]>();
+  const { setProducts } = useSetProductsToLocalStorage();
   const { isShowMobileNavbar, setIsShowMobileNavbar } = useStore();
+
   useEffect(() => {
-    const oldProducts = getLocalStorage("products") || [];
-    if (oldProducts?.length > 0) {
-      setLocalStorage("products", [...oldProducts]);
-    } else {
-      setLocalStorage("products", [...productData]);
-      window.location.reload();
-    }
+    setProducts();
   }, []);
 
   return (
