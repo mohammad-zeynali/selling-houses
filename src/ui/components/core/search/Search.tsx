@@ -4,7 +4,7 @@ import {
   searchProduct,
   sortingProductByArea,
   sortingProductByPrice,
-} from "../../../domain/product";
+} from "../../../../domain/product";
 
 type SearchType = {
   allData: AllProducts;

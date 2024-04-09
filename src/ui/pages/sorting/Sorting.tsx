@@ -1,9 +1,9 @@
 import { useState } from "react";
 import products from "../../../../public/assets/data";
 import ProductItem from "../../components/product/ProductItem";
-import Search from "../../components/search/Search";
+import Search from "../../components/core/search/Search";
 import SortingTab from "../../components/sortingTab/SortingTab";
-import SectionTitle from "../../components/sectionTitle/SectionTitle";
+import SectionTitle from "../../components/core/sectionTitle/SectionTitle";
 
 const SortingPage = (): JSX.Element => {
   const [allProducts, setAllProducts] = useState(products);

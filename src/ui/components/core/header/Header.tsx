@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { useStore } from "../../../contexts/store";
+import { useStore } from "../../../../contexts/store";
 
 const Header = (): JSX.Element => {
   const { isShowMobileNavbar, setIsShowMobileNavbar } = useStore();

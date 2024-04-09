@@ -1,6 +1,6 @@
 import products from "../../../../public/assets/data/index";
 import ProductItem from "../../components/product/ProductItem";
-import SectionTitle from "../../components/sectionTitle/SectionTitle";
+import SectionTitle from "../../components/core/sectionTitle/SectionTitle";
 
 const HomePage = (): JSX.Element => {
   return (
