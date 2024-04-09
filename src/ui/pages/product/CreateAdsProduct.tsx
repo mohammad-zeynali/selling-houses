@@ -2,6 +2,7 @@ import { FieldValues, useForm } from "react-hook-form";
 import CreateAdsForm from "../../components/createAdsForm/CreateAdsForm";
 import { useCreateProduct } from "../../../application/products/createProduct";
 import { Product } from "../../../domain/product";
+import SectionTitle from "../../components/sectionTitle/SectionTitle";
 
 export type CreateProductFiledType = {
   title: string;
@@ -30,9 +31,8 @@ const CreateAdsProductPage = (): JSX.Element => {
   return (
     <section className="min-h-[90vh]">
       <div className="container px-0">
-        <h1 className="mx-auto text-2xl font-openSansBold pt-8 border-b-2 border-solid border-danger w-fit pb-2">
-          register new house ads
-        </h1>
+        <SectionTitle message="register new house ads" />
+
         <CreateAdsForm
           register={register}
           handleSubmit={handleSubmit}

@@ -1,8 +1,8 @@
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "./ui/components/header/Header";
 import { useStore } from "./contexts/store";
 import { useSetProductsToLocalStorage } from "./application/products/createProduct";
-import { useEffect } from "react";
+import Header from "./ui/components/header/Header";
 
 const App = () => {
   const { setProducts } = useSetProductsToLocalStorage();
