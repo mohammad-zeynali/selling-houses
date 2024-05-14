@@ -4,6 +4,7 @@ import Search from "../../components/shared/search/Search";
 import SectionTitle from "../../components/shared/sectionTitle/SectionTitle";
 import SortingTab from "../../components/sortingTab/SortingTab";
 import ProductItem from "../../components/product/ProductItem";
+import ErrorMessage from "../../components/shared/errorMessage/ErrorMessage";
 
 const SortingPage = (): JSX.Element => {
   const [allProducts, setAllProducts] = useState(products);
@@ -33,9 +34,7 @@ const SortingPage = (): JSX.Element => {
             ))}
           </div>
         ) : (
-          <span className="flex justify-center text-danger py-4">
-            Not product found😌😔
-          </span>
+          <ErrorMessage message="Not product found😌😔" />
         )}
       </div>
     </section>

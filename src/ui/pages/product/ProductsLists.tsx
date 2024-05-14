@@ -3,6 +3,7 @@ import products from "../../../../public/assets/data";
 import SectionTitle from "../../components/shared/sectionTitle/SectionTitle";
 import Search from "../../components/shared/search/Search";
 import ProductItem from "../../components/product/ProductItem";
+import ErrorMessage from "../../components/shared/errorMessage/ErrorMessage";
 
 const ProductsListsPage = (): JSX.Element => {
   const [allProducts, setAllProducts] = useState(products);
@@ -21,9 +22,7 @@ const ProductsListsPage = (): JSX.Element => {
             ))}
           </div>
         ) : (
-          <span className="flex justify-center text-danger py-4">
-            Not product found😌😔
-          </span>
+          <ErrorMessage message="Not product found😌😔" />
         )}
       </div>
     </section>
