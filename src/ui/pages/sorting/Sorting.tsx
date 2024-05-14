@@ -1,7 +1,7 @@
 import { useState } from "react";
 import products from "../../../../public/assets/data";
-import Search from "../../components/core/search/Search";
-import SectionTitle from "../../components/core/sectionTitle/SectionTitle";
+import Search from "../../components/shared/search/Search";
+import SectionTitle from "../../components/shared/sectionTitle/SectionTitle";
 import SortingTab from "../../components/sortingTab/SortingTab";
 import ProductItem from "../../components/product/ProductItem";
 
