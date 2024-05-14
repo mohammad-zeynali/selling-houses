@@ -1,8 +1,6 @@
-# selling houses task
+# react clean architecture
 
 <!-- ## [review online](https://mohammad-zeynali.github.io/mimlearn/) -->
-
-
 
 ## tips
 
